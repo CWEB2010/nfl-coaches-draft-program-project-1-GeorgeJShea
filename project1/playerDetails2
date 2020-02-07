@@ -1,0 +1,40 @@
+{'Name': 'Joe Burrow', 'Origin': 'LSU', 'Price': 26400100, 'Position': 'Quaterback', 'Rank': '1'}
+{'Name': 'Tua Tagovailoa', 'Origin': 'Alabama', 'Price': 20300100, 'Position': 'Quaterback', 'Rank': '2'}
+{'Name': 'Justin Herbet', 'Origin': 'Oregon', 'Price': 17420300, 'Position': 'Quaterback', 'Rank': '3'}
+{'Name': 'Jordan Love', 'Origin': 'Utah St', 'Price': 13100145, 'Position': 'Quaterback', 'Rank': '4'}
+{'Name': 'Jake Fromm', 'Origin': 'Georgia', 'Price': 10300000, 'Position': 'Quaterback', 'Rank': '5'}
+{'Name': 'D,Andre Swift', 'Origin': 'Georgia', 'Price': 24500100, 'Position': 'Running Back', 'Rank': '1'}
+{'Name': 'Jonathan Taylor', 'Origin': 'Wiscosnsin', 'Price': 19890200, 'Position': 'Running Back', 'Rank': '2'}
+{'Name': 'J.K. Dobbins', 'Origin': 'Ohio St', 'Price': 18700800, 'Position': 'Running Back', 'Rank': '3'}
+{'Name': 'Zack Moss', 'Origin': 'Utah', 'Price': 15000000, 'Position': 'Running Back', 'Rank': '4'}
+{'Name': 'Cam Akers', 'Origin': 'Florida St', 'Price': 11600400, 'Position': 'Running Back', 'Rank': '5'}
+{'Name': 'CeeDee Lamb', 'Origin': 'Oklahoma', 'Price': 23400000, 'Position': 'Wide Receiver', 'Rank': '1'}
+{'Name': 'Jerry Jeudy', 'Origin': 'Alabama', 'Price': 21900300, 'Position': 'Wide Receiver', 'Rank': '2'}
+{'Name': 'Tee Higgins', 'Origin': 'Clemson', 'Price': 19300230, 'Position': 'Wide Receiver', 'Rank': '3'}
+{'Name': 'Hunry Rugs III', 'Origin': 'Alabama', 'Price': 13400230, 'Position': 'Wide Receiver', 'Rank': '4'}
+{'Name': 'Tyler Johnson', 'Origin': 'Minnesota', 'Price': 10000000, 'Position': 'Wide Receiver', 'Rank': '5'}
+{'Name': 'Chase Young', 'Origin': 'Ohio St', 'Price': 26200300, 'Position': 'Defensive Lineman', 'Rank': '1'}
+{'Name': 'Derrick Brown', 'Origin': 'Auburn', 'Price': 22000000, 'Position': 'Defensive Lineman', 'Rank': '2'}
+{'Name': 'A.J. Epenesa', 'Origin': 'Iwoa', 'Price': 16000000, 'Position': 'Defensive Lineman', 'Rank': '3'}
+{'Name': 'Javon Kinlaw', 'Origin': 'So. Carolina', 'Price': 18000000, 'Position': 'Defensive Lineman', 'Rank': '4'}
+{'Name': 'Yetur Gross-Matos', 'Origin': 'Penn St', 'Price': 13000000, 'Position': 'Defensive Lineman', 'Rank': '5'}
+{'Name': 'Jeff Okudah', 'Origin': 'Ohio St', 'Price': 24000000, 'Position': 'Defensive-Back', 'Rank': '1'}
+{'Name': 'Grant Delpit', 'Origin': 'LSU', 'Price': 22500249, 'Position': 'Defensive-Back', 'Rank': '2'}
+{'Name': 'Kristian Fulton', 'Origin': 'LSU', 'Price': 20000100, 'Position': 'Defensive-Back', 'Rank': '3'}
+{'Name': 'Xavier MCKinney', 'Origin': 'Alabama', 'Price': 16000200, 'Position': 'Defensive-Back', 'Rank': '4'}
+{'Name': 'CJ Henderson', 'Origin': 'Florida', 'Price': 11899999, 'Position': 'Defensive-Back', 'Rank': '5'}
+{'Name': 'Cole Kmet', 'Origin': 'Notre Dame', 'Price': 27800900, 'Position': 'Tight Ends', 'Rank': '1'}
+{'Name': 'Brycen Hopkins', 'Origin': 'Purdue', 'Price': 21000800, 'Position': 'Tight Ends', 'Rank': '2'}
+{'Name': 'Hunter Bryant', 'Origin': 'Washington', 'Price': 17499233, 'Position': 'Tight Ends', 'Rank': '3'}
+{'Name': 'Jared Pinkey', 'Origin': 'Vanderbilt', 'Price': 27900200, 'Position': 'Tight Ends', 'Rank': '4'}
+{'Name': 'Jacaob Breeland', 'Origin': 'Oregon', 'Price': 149000333, 'Position': 'Tight Ends', 'Rank': '5'}
+{'Name': 'Isaiah Simmons', 'Origin': 'Clemson', 'Price': 22900300, 'Position': 'Line Backers', 'Rank': '1'}
+{'Name': 'Kenneth Murray', 'Origin': 'Oklahoma', 'Price': 19000590, 'Position': 'Line Backers', 'Rank': '2'}
+{'Name': 'Zack Baun', 'Origin': 'Wisconsin', 'Price': 180000222, 'Position': 'Line Backers', 'Rank': '3'}
+{'Name': 'Akeem Davis-Gaither', 'Origin': 'App. St.', 'Price': 12999999, 'Position': 'Line Backers', 'Rank': '4'}
+{'Name': 'Troy Dye', 'Origin': 'Oregon', 'Price': 10001100, 'Position': 'Line Backers', 'Rank': '5'}
+{'Name': 'Jedrick Will Jr.', 'Origin': 'Alabama', 'Price': 23000000, 'Position': 'Offensive Tackles', 'Rank': '1'}
+{'Name': 'Andrew Thomas', 'Origin': 'Georgia', 'Price': 20000000, 'Position': 'Offensive Tackles', 'Rank': '2'}
+{'Name': 'Tristan Wirfs.', 'Origin': 'Iowa', 'Price': 19400000, 'Position': 'Offensive Tackles', 'Rank': '3'}
+{'Name': 'Tyler Biadasz', 'Origin': 'Wisconsin', 'Price': 16200700, 'Position': 'Offensive Tackles', 'Rank': '4'}
+{'Name': 'Mekhi Becton', 'Origin': 'Louisville', 'Price': 15900000, 'Position': 'Offensive Tackles', 'Rank': '5'}
