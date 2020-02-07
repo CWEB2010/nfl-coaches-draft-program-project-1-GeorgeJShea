@@ -2,7 +2,7 @@
 _____________________________________________________
 Created By: George Shea                     ßeta
 Created:7/2/2020
-Version: 1.0
+Version: 1.1
 Version Update: 7/2/2020
 Info:
 Draft picker for choaches to choice there new recruits
@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace project1
+namespace TestClasses
 {
     class Program
     {
@@ -88,12 +88,12 @@ namespace project1
             // total cash
             int fund = 96000000;
             // prints out "rules and tells you how much money you have
-            Console.WriteLine("______________________________________________________________________________________________________________________");
+            Console.WriteLine("_______________________________________________________________________________________________________________________________________________________________");
             Console.WriteLine("2020 Draft Rules");
             Console.WriteLine("1: You may choose up to 5 players");
             Console.WriteLine("2: You may not go over budget");
             Console.WriteLine("Current Funds: " + fund);
-            Console.WriteLine("______________________________________________________________________________________________________________________");
+            Console.WriteLine("_______________________________________________________________________________________________________________________________________________________________");
             /*
              This si where things start to pick up pace ie get confusing
              */
@@ -102,6 +102,8 @@ namespace project1
             int pickRow = 0;
             // empty array to store your choices 
             string[] choices = { " ", " ", " ", " ", " " };
+            string[] choicesO = { " ", " ", " ", " ", " " };
+            string[] choicesP = { " ", " ", " ", " ", " " };
             // counter
             int choiceCount = 0;
             Console.WriteLine("press x to conclude choosing");
@@ -121,7 +123,7 @@ namespace project1
                 // - so that it works normaly ie how most people count
                 pickRow = pickRow - 1;
                 // makes sure you pick with in the array
-                if (pickRow < 8 || pickRow > 0)
+                if (pickRow < 7 && pickRow > 0)
                 {
                     // if failed to go in bounds breaks loops back to start
                     Console.WriteLine("Enter The Rank(Coloumn) You would like to choose from");
@@ -136,7 +138,7 @@ namespace project1
                     // once again converts it into how people normaly count
                     pickCol = pickCol - 1;
                     // makes sure in bounds if not loops you guess it again
-                    if (pickCol < 5 || pickRow > 0)
+                    if (pickCol < 5 && pickRow > 0)
                     {
                         // prints it out what you picked to make sure you picked the right person
                         Console.WriteLine("You Choose " + playerArray[pickRow, pickCol].Name);
@@ -158,6 +160,9 @@ namespace project1
                                         fund = fund - playerArray[pickRow, pickCol].Price;
                                         // adds player into your choices into a list so it can print at the end
                                         choices[choiceCount] = playerArray[pickRow, pickCol].Name;
+                                        choicesO[choiceCount] = playerArray[pickRow, pickCol].Origin;
+                                        choicesP[choiceCount] = Convert.ToString(playerArray[pickRow, pickCol].Price);
+
                                         // writes down current funds
                                         Console.WriteLine(fund);
                                         // adds one to the choices max 5
@@ -180,7 +185,6 @@ namespace project1
                     else
                     {
                         Console.WriteLine("Out of Bonds");
-                        break;
                     }
 
                 }
@@ -191,12 +195,17 @@ namespace project1
                 }
             }
             // concludes the chocing phase
-            Console.WriteLine("All players chosen have nice day");
+            Console.WriteLine();
+            Console.WriteLine("All players have been chosen have nice day");
             Console.WriteLine("Your Choices Were ");
             // prints out what you choice for players
-            Console.WriteLine(choices[0], " ", choices[1] + " " + choices[2] + " " + choices[3] + " " + choices[4]);
+
+            Console.WriteLine("      {0,-20}      {1,-20}      {2,-20}      {3,-20}       {4,-20}", choices[0], choices[1], choices[2], choices[3], choices[4]);
+            Console.WriteLine("      {0,-20}      {1,-20}      {2,-20}      {3,-20}       {4,-20}", choicesO[0], choicesO[1], choicesO[2], choicesO[3], choicesO[4]);
+            Console.WriteLine("      {0,-20}      {1,-20}      {2,-20}      {3,-20}       {4,-20}", choicesP[0], choicesP[1], choicesP[2], choicesP[3], choicesP[4]);
+
             // just for niceness tells you left over funds
-            Console.WriteLine("You Have $ " + fund + "remaining");
+            Console.WriteLine("You Have $ " + fund + " remaining");
             Console.WriteLine();
             // checks if you were spending wisely
             if (fund > 65000000 && economic > 2)
@@ -204,7 +213,7 @@ namespace project1
                 Console.WriteLine("Great Work Coach You Were Econmic");
             }
             Console.WriteLine("We hope to see you next year");
-            Console.WriteLine("______________________________________________________________________________________________________________________");
+            Console.WriteLine("_______________________________________________________________________________________________________________________________________________________________");
         }
     }
 
