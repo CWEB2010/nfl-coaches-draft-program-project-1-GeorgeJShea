@@ -2,7 +2,7 @@
 _____________________________________________________
 Created By: George Shea                     ßeta
 Created:7/2/2020
-Version: 1.1
+Version: 1.2
 Version Update: 7/2/2020
 Info:
 Draft picker for choaches to choice there new recruits
@@ -123,7 +123,7 @@ namespace TestClasses
                 // - so that it works normaly ie how most people count
                 pickRow = pickRow - 1;
                 // makes sure you pick with in the array
-                if (pickRow < 7 && pickRow > 0)
+                if (pickRow < 8 && pickRow >= 0)
                 {
                     // if failed to go in bounds breaks loops back to start
                     Console.WriteLine("Enter The Rank(Coloumn) You would like to choose from");
@@ -138,7 +138,7 @@ namespace TestClasses
                     // once again converts it into how people normaly count
                     pickCol = pickCol - 1;
                     // makes sure in bounds if not loops you guess it again
-                    if (pickCol < 5 && pickRow > 0)
+                    if (pickCol < 6 && pickRow >= 0)
                     {
                         // prints it out what you picked to make sure you picked the right person
                         Console.WriteLine("You Choose " + playerArray[pickRow, pickCol].Name);
