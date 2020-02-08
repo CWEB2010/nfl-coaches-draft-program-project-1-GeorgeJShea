@@ -46,6 +46,9 @@ namespace TestClasses
             int assignCounter = 0;
 
             // for every line in the json file it does the contents of the loop         // gets file from there
+            //
+            // IMPORTANT || change the realine to your own directory or this will not work in the slightest
+            //
             foreach (string line in System.IO.File.ReadLines(@"C:\Users\shegeoj\source\repos\TestClasses\TestClasses\playerDetails2.txt"))
             {
                 // adds in line to the array
