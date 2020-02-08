@@ -2,7 +2,7 @@
 _____________________________________________________
 Created By: George Shea                     ßeta
 Created:7/2/2020
-Version: 1.2
+Version: 2.0
 Version Update: 7/2/2020
 Info:
 Draft picker for choaches to choice there new recruits
@@ -19,6 +19,16 @@ namespace TestClasses
     {
         static void Main(string[] args)
         {
+            Players[,] playerArray = StartUp();
+
+            Printer(playerArray);
+
+            OpperationBoard(playerArray);
+
+        }
+        
+        static Players[,] StartUp()
+        {
             // this is told because how it prints it is 2 big for just the deafult screen size
             Console.WriteLine("This Application works best in full screen mode");
             Console.WriteLine("Please do so once ready press return");
@@ -31,8 +41,10 @@ namespace TestClasses
 
             // this holds the json information
             List<String> PlayerInfoLine = new List<String>();
+
             // counter
             int assignCounter = 0;
+
             // for every line in the json file it does the contents of the loop         // gets file from there
             foreach (string line in System.IO.File.ReadLines(@"C:\Users\shegeoj\source\repos\TestClasses\TestClasses\playerDetails2.txt"))
             {
@@ -41,11 +53,13 @@ namespace TestClasses
 
                 // mover takes in the json file and turns that into object data || temporory 
                 var mover = JsonConvert.DeserializeObject<Players>(PlayerInfoLine[assignCounter]);
+
                 // adds new object to the list with all the json atributes
                 playerList.Add(new Players { Name = mover.Name, Origin = mover.Origin, Position = mover.Position, Price = mover.Price, Rank = mover.Rank });
 
                 assignCounter = assignCounter + 1;
             }
+
             // uses list and simply plops in into the array
             Players[,] playerArray = new Players[,]
             {
@@ -59,7 +73,15 @@ namespace TestClasses
                     { playerList[35], playerList[36], playerList[37], playerList[38], playerList[39] }
             };
 
+
             Console.WriteLine();
+            return playerArray;
+
+        }
+
+        static int Printer(Players[,] playerArray)
+        {
+            playerArray = playerArray;
             // row
             int i = 0;
             // colloumn
@@ -67,7 +89,6 @@ namespace TestClasses
             // counter
             int arraySetCount = 0;
             // this is used to see if the coach is spending money  "wisely"
-            int economic = 0;
             // this stores the positions so it can be printed
             string[] postions = { "QauterBack", "Running Back", "WideReciever", "DefensiveLineman", "DefensiveBack", "TightEnd", "Line Backer", "Offensive Tackles" };
             // this stores space equivilent so it prints out nicely
@@ -94,6 +115,14 @@ namespace TestClasses
             Console.WriteLine("2: You may not go over budget");
             Console.WriteLine("Current Funds: " + fund);
             Console.WriteLine("_______________________________________________________________________________________________________________________________________________________________");
+
+            return fund;
+        }
+
+        static void OpperationBoard(Players[,] playerArray)
+        {
+            int fund = 96000000;
+            int economic = 0;
             /*
              This si where things start to pick up pace ie get confusing
              */
@@ -148,38 +177,34 @@ namespace TestClasses
                         Console.WriteLine("Is that correct y/n");
                         string check = Console.ReadLine();
                         // if yes do this if not once again back in the loop you go
-                        if (check == "y")
-                            // makes sure you do not pick the same player twice
-                            if ((playerArray[pickRow, pickCol].Name != choices[0] && playerArray[pickRow, pickCol].Name != choices[1] && playerArray[pickRow, pickCol].Name != choices[2] && playerArray[pickRow, pickCol].Name != choices[3] && playerArray[pickRow, pickCol].Name != choices[4]))
-                            {
-                                {
-                                    // double checks that picking this player will not make you go in the red
-                                    if ((fund - playerArray[pickRow, pickCol].Price) > 0)
-                                    {
-                                        // takes away your precisoue money
-                                        fund = fund - playerArray[pickRow, pickCol].Price;
-                                        // adds player into your choices into a list so it can print at the end
-                                        choices[choiceCount] = playerArray[pickRow, pickCol].Name;
-                                        choicesO[choiceCount] = playerArray[pickRow, pickCol].Origin;
-                                        choicesP[choiceCount] = Convert.ToString(playerArray[pickRow, pickCol].Price);
+                        // double checks that picking this player will not make you go in the red
+                        // makes sure you do not pick the same player twice
+                        if (fund - playerArray[pickRow, pickCol].Price > 0 && check == "y" && playerArray[pickRow, pickCol].Name != choices[0] && playerArray[pickRow, pickCol].Name != choices[1] && playerArray[pickRow, pickCol].Name != choices[2] && playerArray[pickRow, pickCol].Name != choices[3] && playerArray[pickRow, pickCol].Name != choices[4])
+                        {
+                            // takes away your precisoue money
+                            fund = fund - playerArray[pickRow, pickCol].Price;
+                            // adds player into your choices into a list so it can print at the end
+                            choices[choiceCount] = playerArray[pickRow, pickCol].Name;
+                            choicesO[choiceCount] = playerArray[pickRow, pickCol].Origin;
+                            choicesP[choiceCount] = Convert.ToString(playerArray[pickRow, pickCol].Price);
 
-                                        // writes down current funds
-                                        Console.WriteLine(fund);
-                                        // adds one to the choices max 5
-                                        choiceCount = choiceCount + 1;
-                                        // this is for the choachs who spend efficiently just adds if the player is in the top 3
-                                        if (playerArray[pickRow, pickCol].Rank == "1" || playerArray[pickRow, pickCol].Rank == "2" || playerArray[pickRow, pickCol].Rank == "3")
-                                        {
-                                            economic = economic + 1;
-                                        }
-                                    }
-                                }
-                            }
-                            // just breaking logic
-                            else
+                            // writes down current funds
+                            Console.WriteLine(fund);
+                            // adds one to the choices max 5
+                            choiceCount = choiceCount + 1;
+                            // this is for the choachs who spend efficiently just adds if the player is in the top 3
+                            if (playerArray[pickRow, pickCol].Rank == "1" || playerArray[pickRow, pickCol].Rank == "2" || playerArray[pickRow, pickCol].Rank == "3")
                             {
-                                Console.WriteLine("Sorry You have already choose that player");
+                                economic = economic + 1;
                             }
+
+                        }
+
+                        // just breaking logic
+                        else
+                        {
+                            Console.WriteLine("Sorry You have already choose that player");
+                        }
                     }
                     // just breaking logic
                     else
