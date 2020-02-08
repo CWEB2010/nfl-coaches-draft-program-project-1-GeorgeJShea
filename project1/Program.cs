@@ -223,7 +223,17 @@ namespace TestClasses
                         }
                         else
                         {
-                            Console.WriteLine("Sorry you have already selected that player or your funding is not enough");
+                            if (check != "y")
+                            {
+                                Console.WriteLine("Feel free to pick another player");
+                                Console.WriteLine();
+                            }
+                            if (fund < 0)
+                            {
+                                Console.WriteLine("Your do not have sufficent funding");
+                                Console.WriteLine();
+                            }
+
                         }
                     }
                     else
@@ -245,7 +255,7 @@ namespace TestClasses
             Console.WriteLine("      {0,-20}      {1,-20}      {2,-20}      {3,-20}       {4,-20}", choicesO[0], choicesO[1], choicesO[2], choicesO[3], choicesO[4]);
             Console.WriteLine("      {0,-20}      {1,-20}      {2,-20}      {3,-20}       {4,-20}", choicesP[0], choicesP[1], choicesP[2], choicesP[3], choicesP[4]);
 
-            Console.WriteLine("You Have $ " + fund + " remaining");
+            Console.WriteLine("You Have $" + fund + " remaining");
             Console.WriteLine();
 
             // Gives the Economic award
