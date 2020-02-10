@@ -8,3 +8,5 @@ Version 2.0 7/2/2020
 pretty big update methodized everything and made for easer reading
 Version 2.1 8/2/2020
 minor syntax changes and some more english
+Version 2.2 10/2/2020
+Added directory logic so now it pulls file from the correct location
