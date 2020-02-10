@@ -3,7 +3,7 @@ _____________________________________________________
 Created By: George Shea                     ßeta
 Created:7/2/2020
 Version: 2.2
-Version Update: 10/2/2020
+Version Update: 7/2/2020
 Info:
 Draft picker for choaches to choice there new recruits
 _____________________________________________________
@@ -13,6 +13,8 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Drawing;
+using Console = Colorful.Console;
 
 namespace TestClasses
 {
@@ -107,6 +109,7 @@ namespace TestClasses
             Console.WriteLine();
 
             // Prints out player information Name, Origin, Price
+
             while (arraySetCount < 7)
             {
                 Console.WriteLine("      {0,-20}      {1,-20}      {2,-20}      {3,-20}       {4,-20}       {5,-20}", postionsSpaces[i], playerArray[i, j].Name, playerArray[i, j + 1].Name, playerArray[i, j + 2].Name, playerArray[i, j + 3].Name, playerArray[i, j + 4].Name);
