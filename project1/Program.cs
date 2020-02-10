@@ -2,14 +2,15 @@
 _____________________________________________________
 Created By: George Shea                     ßeta
 Created:7/2/2020
-Version: 2.1
-Version Update: 7/2/2020
+Version: 2.2
+Version Update: 10/2/2020
 Info:
 Draft picker for choaches to choice there new recruits
 _____________________________________________________
  */
 
 using System;
+using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
@@ -48,7 +49,11 @@ namespace TestClasses
             int assignCounter = 0;
 
             // for every line in the json file it does the contents of the loop         // gets file from there
-            foreach (string line in System.IO.File.ReadLines(@"C:\Users\shegeoj\source\repos\TestClasses\TestClasses\playerDetails2.txt"))
+
+            // gets file location regardless of who is using it
+            string fullPath = Path.GetFullPath("playerDetails2.txt");
+
+            foreach (string line in System.IO.File.ReadLines(@fullPath))
             {
                 // adds in line to the array
                 PlayerInfoLine.Add(new String(line));
