@@ -3,7 +3,7 @@ _____________________________________________________
 Created By: George Shea                     ßeta
 Created:7/2/2020
 Version: 2.2
-Version Update: 7/2/2020
+Version Update: 12/2/2020
 Info:
 Draft picker for choaches to choice there new recruits
 _____________________________________________________
