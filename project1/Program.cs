@@ -2,8 +2,8 @@
 _____________________________________________________
 Created By: George Shea                     ßeta
 Created:7/2/2020
-Version: 2.2
-Version Update: 12/2/2020
+Version: 2.3
+Version Update: 14/2/2020
 Info:
 Draft picker for choaches to choice there new recruits
 _____________________________________________________
@@ -13,8 +13,6 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using System.Drawing;
-using Console = Colorful.Console;
 
 namespace TestClasses
 {
@@ -174,7 +172,7 @@ namespace TestClasses
                 // Pick within array if fail loops back
                 if (pickRow < 8 && pickRow >= 0)
                 {
-                    Console.WriteLine("Enter The Rank(Coloumn) You would like to choose from");
+                    Console.WriteLine("Enter The Rank(Column) You would like to choose from");
                     string pickColstring = Console.ReadLine();
                     
                     if (pickColstring == "x")
@@ -191,9 +189,10 @@ namespace TestClasses
                     pickCol -= 1;
 
                     // Makes sure inbounds and loops if fails
-                    if (pickCol < 6 && pickRow >= 0)
+                    if (pickCol < 7 && pickRow >= 0)
                     {
                         // Prints Out Player Info
+                        pickCol -= 1;
                         Console.WriteLine("You Choose " + playerArray[pickRow, pickCol].Name);
                         Console.WriteLine("           " + playerArray[pickRow, pickCol].Origin);
                         Console.WriteLine("           " + playerArray[pickRow, pickCol].Price);
@@ -277,21 +276,15 @@ namespace TestClasses
         }
     }
 
-        public class Players
-        {
+    public class Players
+    {
         // super exiting variables
-            public string Name { get; set; } = " ";
-            public string Origin { get; set; } = " ";
-            public int Price { get; set; } 
-            public string Position { get; set; } = " ";
-            public string Rank { get; set; } = " ";
-            
+        public string Name { get; set; } = " ";
+        public string Origin { get; set; } = " ";
+        public int Price { get; set; }
+        public string Position { get; set; } = " ";
+        public string Rank { get; set; } = " ";
+        public string ColorAtr { get; set; } = " ";
 
-            // used for testing 
-            public void bio()
-            {
-                Console.WriteLine("Name: " + Name + "Origin: " + Origin + "Cost: " + Price + "Rank: " + Rank + "Position: " + Position);
-            }
-
-        }
+    }
 }
