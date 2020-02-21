@@ -192,7 +192,7 @@ namespace TestClasses
                     if (pickCol < 7 && pickRow >= 0)
                     {
                         // Prints Out Player Info
-                        pickCol -= 1;
+
                         Console.WriteLine("You Choose " + playerArray[pickRow, pickCol].Name);
                         Console.WriteLine("           " + playerArray[pickRow, pickCol].Origin);
                         Console.WriteLine("           " + playerArray[pickRow, pickCol].Price);
